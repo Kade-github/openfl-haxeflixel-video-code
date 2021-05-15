@@ -12,30 +12,30 @@ and add extra code
 after `addChild(new FlxGame(gameWidth, gameHeight, initialState, zoom, updateframerate, drawframerate, skipSplash, startFullscreen));`
 and before
 `
- 		#if !mobile
-		addChild(new FPS(10, 3, 0xFFFFFF));
-		#end
+#if !mobile
+addChild(new FPS(10, 3, 0xFFFFFF));
+#end
 `
 the code
 `
-		#if web
-		var str1:String = "HTML CRAP";
-		var vHandler = new VideoHandler();
-		vHandler.init1();
-		vHandler.video.name = str1;
-		addChild(vHandler.video);
-		vHandler.init2();
-		GlobalVideo.setVid(vHandler);
-		vHandler.source(ourSource);
-		#elseif desktop
-		var str1:String = "WEBM SHIT"; 
-		var webmHandle = new WebmHandler();
-		webmHandle.source(ourSource);
-		webmHandle.makePlayer();
-		webmHandle.webm.name = str1;
-		addChild(webmHandle.webm);
-		GlobalVideo.setWebm(webmHandle);
-		#end
+#if web
+var str1:String = "HTML CRAP";
+var vHandler = new VideoHandler();
+vHandler.init1();
+vHandler.video.name = str1;
+addChild(vHandler.video);
+vHandler.init2();
+GlobalVideo.setVid(vHandler);
+vHandler.source(ourSource);
+#elseif desktop
+var str1:String = "WEBM SHIT"; 
+var webmHandle = new WebmHandler();
+webmHandle.source(ourSource);
+webmHandle.makePlayer();
+webmHandle.webm.name = str1;
+addChild(webmHandle.webm);
+GlobalVideo.setWebm(webmHandle);
+#end
 `
 so it would look something like
 `
