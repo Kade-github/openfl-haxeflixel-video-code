@@ -129,8 +129,8 @@ This command logs the number of frames your video has and now you may ask. \
 Now you may ask `What am i suppose to do with the frame numbers?` You have to make your video name first. \
 Let me give a video name sample of `video`. \
 Now inside the videos folder in either `assets/preload/videos` or `assets/videos` `(SOURCE CODE SPECIFIC)` if the video name is `video` then make a file called `video.txt` and put the frame numbers there as easy as that. \
-2. put your webm file in so it will be `video.webm`
-3. put the ogg file in so it will be `video.ogg`
+2. put your webm file in so it will be `video.webm` \
+3. put the ogg converted file in so it will be `video.ogg` \
 # Usage of the player
 You can edit `VideoState.hx` all you want but the usage of the `VideoState` class is pretty simple. \
 The return must be a new class but i made a separate `VideoState.hx` file inside the `function` folder in this repository to change the callback to a function.
