@@ -100,9 +100,9 @@ https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2021-05-14-20-
 5. Change directory inside the `bin` folder
 6. `More on this later`
 # Understanding of how video works
-As you know, this only supports `webm` video files not `mp4` or `any other file type`
-The reasoning of this is because of the different types of codecs not embedded inside openfl
-Let me give an explanation
+As you know, this only supports `webm` video files not `mp4` or `any other file type` \
+The reasoning of this is because of the different types of codecs not embedded inside openfl \
+Let me give an explanation \
 `Video Files` require a `codec`
 a codec is an `encoder` or a `decoder` for video files
 You `CANNOT` compress video files to a smaller size in modern times because they are already `COMPRESSED` and that is why we have `codecs` so you can't push the limit
