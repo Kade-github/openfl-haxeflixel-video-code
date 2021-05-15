@@ -87,3 +87,35 @@ Add these two lines
 Create a new folder named `videos` inside assets/preload
 If your in the old file system
 Create a new folder named `videos` inside assets
+# Setting up the desktop build
+For all you windows users out there
+You need to do an extra step
+You must know how to use cmd or `Command Prompt`
+(sorry but this is only for `64 bit` architectures)
+1. Download ffmpeg
+https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2021-05-14-20-06/ffmpeg-n4.4-15-ge87e006121-win64-gpl-shared-4.4.zip
+2. Extract the zip file to your choice
+3. Go inside the `bin` folder inside the extracted zip file
+4. Open `Command Prompt`
+5. Change directory inside the `bin` folder
+6. `More on this later`
+# Understanding of how video works
+As you know, this only supports `webm` video files not `mp4` or `any other file type`
+The reasoning of this is because of the different types of codecs not embedded inside openfl
+Let me give an explanation
+`Video Files` require a `codec`
+a codec is an `encoder` or a `decoder` for video files
+You `CANNOT` compress video files to a smaller size in modern times because they are already `COMPRESSED` and that is why we have `codecs` so you can't push the limit
+OpenFL has no codec embedded into it that's why someone who made `openfl-webm` coded the webm codec from scratch using `c++` for haxe/openfl
+But if you will ask `Why does it work for html?`
+It's because when it comes to html the `BROWSER` has the codec
+If you were to do it Natively `Native means an application that uses the system's commands instead of depending on other software like browsers which is for html5`, there are no codecs built into it.
+Now if you were to ask `Why is it named extension-webm if it was openfl-webm then?` It's because `openfl-webm` is ancient and broken so someone made `extension-webm` to fix it: https://github.com/HaxeExtension/extension-webm
+Now if you were to ask `Then why did i install https://github.com/GrowtopiaFli/extension-webm instead of https://github.com/HaxeExtension/extension-webm then?` It's because i added some extra code in `WebmPlayer.hx` to fix memory leaks.
+Now if you were to ask `What are memory leaks?` well a memory leak is a thing wherein the memory is stuffed and not freed, in basic terms, your `RAM` processes more data.
+Why you ask? it's because the video isn't being replaced but keep being added each time.
+How did i fix this issue you asked? i added extra code to `WebmPlayer.hx` which allows you to change the `SOURCE VIDEO` of the webm player anytime.
+# Solution for the desktop build
+Now how will we setup the video on desktop?
+Well in webm player there is `NO` audio support because it's broken lol so now we are in trouble but do not worry because ffmpeg is here to save us.
+My solution is to `Audio Sync` a way of Synchronizing the audio version of the video to the video `You must have an ogg file either just the video's audio or just empty audio that lasts as long as the video's time`.
