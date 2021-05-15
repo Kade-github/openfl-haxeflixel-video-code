@@ -66,3 +66,4 @@ so it would look something like
 		addChild(new FPS(10, 3, 0xFFFFFF));
 		#end
 `
+yess
