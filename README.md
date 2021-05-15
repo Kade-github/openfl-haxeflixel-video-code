@@ -12,11 +12,11 @@ and add extra code
 after `addChild(new FlxGame(gameWidth, gameHeight, initialState, zoom, updateframerate, drawframerate, skipSplash, startFullscreen));`
 and before
 `
-    #if !mobile
+ 		#if !mobile
 		addChild(new FPS(10, 3, 0xFFFFFF));
 		#end
 `
-copy paste in the code
+the code
 `
 		#if web
 		var str1:String = "HTML CRAP";
