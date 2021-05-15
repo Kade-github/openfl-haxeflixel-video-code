@@ -114,12 +114,12 @@ Now if you were to ask `Why is it named extension-webm if it was openfl-webm the
 Now if you were to ask `Then why did i install https://github.com/GrowtopiaFli/extension-webm instead of https://github.com/HaxeExtension/extension-webm then?` It's because i added some extra code in `WebmPlayer.hx` to fix memory leaks. \
 Now if you were to ask `What are memory leaks?` well a memory leak is a thing wherein the memory is stuffed and not freed, in basic terms, your `RAM` processes more data. \
 Why you ask? it's because the video isn't being replaced but keep being added each time. \
-How did i fix this issue you asked? i added extra code to `WebmPlayer.hx` which allows you to change the `SOURCE VIDEO` of the webm player anytime. \
+How did i fix this issue you asked? i added extra code to `WebmPlayer.hx` which allows you to change the `SOURCE VIDEO` of the webm player anytime.
 # Solution for the desktop build
 Now how will we setup the video on desktop? \
 Well in webm player there is `NO` audio support because it's broken lol so now we are in trouble but do not worry because ffmpeg is here to save us. \
 My solution is to `Audio Sync` a way of Synchronizing the audio version of the video to the video `You must have an ogg file either just the video's audio or just empty audio that lasts as long as the video's time`. \
-So back to that ffmpeg change directory folder is a ffprobe command template i have \
+So back to that ffmpeg change directory folder is a ffprobe command template i have
 ```cmd
 ffprobe -v error -count_frames -select_streams v:0 -show_entries stream=nb_read_frames -of default=nokey=1:noprint_wrappers=1 "yourvideo.mp4"
 ```
