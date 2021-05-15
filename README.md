@@ -20,6 +20,8 @@ addChild(new FPS(10, 3, 0xFFFFFF));
 ```
 The code
 ```js
+var ourSource:String = "assets/videos/DO NOT DELETE OR GAME WILL CRASH/dontDelete.webm";
+
 #if web
 var str1:String = "HTML CRAP";
 var vHandler = new VideoHandler();
