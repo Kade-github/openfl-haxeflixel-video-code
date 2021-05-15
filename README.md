@@ -7,7 +7,7 @@ This is my research on how to play videos in openfl haxeflixel (webm only suppor
 4. It won't work lol so type the command `lime rebuild extension-webm windows`
 (sry idk how to fix this for mac)
 5. Download the zip of this repository and copy paste the files inside the `source` folder to your fnf source code's `source` folder
-6. Edit the `Main.hx` file in the fnf source code
+6. Edit the `Main.hx` file in the fnf source code \
 And add after
 ```js
 addChild(new FlxGame(gameWidth, gameHeight, initialState, zoom, updateframerate, drawframerate, skipSplash, startFullscreen));
@@ -77,15 +77,15 @@ addChild(new FPS(10, 3, 0xFFFFFF));
 <haxelib name="extension-webm" if="desktop" />
 ```
 4. `FOLLOW THIS 4TH STEP ONLY IF YOUR USING THE OLD FILE SYSTEM`
-In the section with `<assets path="bla">`
+In the section with `<assets path="bla">` \
 Add these two lines
 ```xml
 <assets path="assets/videos" include="*.mp3" if="web"/>
 <assets path="assets/videos" include="*.ogg" unless="web"/>
 ```
-5. If your in the new file system
-Create a new folder named `videos` inside assets/preload
-If your in the old file system
+5. If your in the new file system \
+Create a new folder named `videos` inside assets/preload \
+If your in the old file system \
 Create a new folder named `videos` inside assets
 # Setting up the desktop build
 For all you windows users out there
