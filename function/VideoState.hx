@@ -76,8 +76,11 @@ class VideoState extends MusicBeatState
 
 		if (GlobalVideo.isWebm)
 		{
-			useSound = true;
-			vidSound = FlxG.sound.play(leSource.replace(".webm", ".ogg"));
+			if (Assets.exists(leSource.replace(".webm", ".ogg"), MUSIC) || Assets.exists(leSource.replace(".webm", ".ogg"), SOUND))
+			{
+				useSound = true;
+				vidSound = FlxG.sound.play(leSource.replace(".webm", ".ogg"));
+			}
 		}
 
 		GlobalVideo.get().source(leSource);
@@ -90,7 +93,6 @@ class VideoState extends MusicBeatState
 		if (GlobalVideo.isWebm)
 		{
 			GlobalVideo.get().restart();
-			useSound = true;
 		} else {
 			GlobalVideo.get().play();
 		}

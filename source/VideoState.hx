@@ -11,6 +11,7 @@ import flixel.util.FlxTimer;
 import lime.app.Application;
 import flixel.system.FlxSound;
 import openfl.utils.Assets;
+import openfl.utils.AssetType;
 
 import openfl.Lib;
 
@@ -74,8 +75,11 @@ class VideoState extends MusicBeatState
 
 		if (GlobalVideo.isWebm)
 		{
-			useSound = true;
-			vidSound = FlxG.sound.play(leSource.replace(".webm", ".ogg"));
+			if (Assets.exists(leSource.replace(".webm", ".ogg"), MUSIC) || Assets.exists(leSource.replace(".webm", ".ogg"), SOUND))
+			{
+				useSound = true;
+				vidSound = FlxG.sound.play(leSource.replace(".webm", ".ogg"));
+			}
 		}
 
 		GlobalVideo.get().source(leSource);
@@ -88,7 +92,6 @@ class VideoState extends MusicBeatState
 		if (GlobalVideo.isWebm)
 		{
 			GlobalVideo.get().restart();
-			useSound = true;
 		} else {
 			GlobalVideo.get().play();
 		}
