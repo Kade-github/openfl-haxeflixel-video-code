@@ -38,7 +38,7 @@ GlobalVideo.setWebm(webmHandle);
 #end
 `
 so it would look something like
-`
+```js
 addChild(new FlxGame(gameWidth, gameHeight, initialState, zoom, updateframerate, drawframerate, skipSplash, startFullscreen));
 		
 var ourSource:String = "assets/videos/DO NOT DELETE OR GAME WILL CRASH/dontDelete.webm";
@@ -65,5 +65,5 @@ GlobalVideo.setWebm(webmHandle);
 #if !mobile
 addChild(new FPS(10, 3, 0xFFFFFF));
 #end
-`
+```
 yess
