@@ -8,18 +8,17 @@ This is my research on how to play videos in openfl haxeflixel (webm only suppor
 (sry idk how to fix this for mac)
 5. Download the zip of this repository and copy paste the files inside the `source` folder to your fnf source code's `source` folder
 6. Edit the `Main.hx` file in the fnf source code
-and add extra code
-after
+And add after
 ```js
 addChild(new FlxGame(gameWidth, gameHeight, initialState, zoom, updateframerate, drawframerate, skipSplash, startFullscreen));
 ```
-and before
+And before
 ```js
 #if !mobile
 addChild(new FPS(10, 3, 0xFFFFFF));
 #end
 ```
-the code
+The code
 ```js
 #if web
 var str1:String = "HTML CRAP";
@@ -40,7 +39,7 @@ addChild(webmHandle.webm);
 GlobalVideo.setWebm(webmHandle);
 #end
 ```
-so it would look something like
+So it would look something like
 ```js
 addChild(new FlxGame(gameWidth, gameHeight, initialState, zoom, updateframerate, drawframerate, skipSplash, startFullscreen));
 		
