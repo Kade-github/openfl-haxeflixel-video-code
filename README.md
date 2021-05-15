@@ -68,4 +68,22 @@ GlobalVideo.setWebm(webmHandle);
 addChild(new FPS(10, 3, 0xFFFFFF));
 #end
 ```
-yess
+# Setting up `Project.xml`
+1. Edit `Project.xml` in the fnf source code
+2. Find the section with `<haxelib name="etc" />`
+3. Add these two extra lines
+```xml
+<haxelib name="actuate" />
+<haxelib name="extension-webm" if="desktop" />
+```
+4. `FOLLOW THIS 4TH STEP ONLY IF YOUR USING THE OLD FILE SYSTEM`
+In the section with `<assets path="bla">`
+Add these two lines
+```xml
+<assets path="assets/videos" include="*.mp3" if="web"/>
+<assets path="assets/videos" include="*.ogg" unless="web"/>
+```
+5. If your in the new file system
+Create a new folder named `videos` inside assets/preload
+If your in the old file system
+Create a new folder named `videos` inside assets
