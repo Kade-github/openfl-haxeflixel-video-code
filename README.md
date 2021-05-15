@@ -8,7 +8,7 @@ This is my research on how to play videos in openfl haxeflixel (webm only suppor
 (sry idk how to fix this for mac)
 5. Download the zip of this repository and copy paste the files inside the `source` folder to your fnf source code's `source` folder
 6. Edit the `Main.hx` file in the fnf source code \
-Then add after the cde
+Then add after the code
 ```js
 addChild(new FlxGame(gameWidth, gameHeight, initialState, zoom, updateframerate, drawframerate, skipSplash, startFullscreen));
 ```
@@ -87,6 +87,7 @@ Add these two lines
 Create a new folder named `videos` inside assets/preload \
 If your in the old file system \
 Create a new folder named `videos` inside assets
+6. Paste the `DO NOT DELETE OR GAME WILL CRASH` folder inside the videos folder (either assets/preload/videos or assets/videos `SOURCE CODE SPECIFIC`) if you don't you know what happens, game crashes.
 # Setting up the desktop build
 For all you windows users out there
 You need to do an extra step
