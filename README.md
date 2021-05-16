@@ -133,7 +133,8 @@ Now you may ask `What am i suppose to do with the frame numbers?` You have to ma
 Let me give a video name sample of `video`. \
 Now inside the videos folder in either `assets/preload/videos` or `assets/videos` `(SOURCE CODE SPECIFIC)` if the video name is `video` then make a file called `video.txt` and put the frame numbers there as easy as that. \
 2. put your webm file in so it will be `video.webm` \
-3. put the ogg converted file in so it will be `video.ogg`
+3. put the ogg converted file in so it will be `video.ogg` \
+`IMPORTANT NOTE THAT THERE ARE DIFFERENT CODECS FOR WEBM FILES THE SPECIFIC ONE IS VP8 WHILE VP9 AND OTHERS AREN'T SUPPORTED`
 # Usage of the player
 You can edit `VideoState.hx` all you want but the usage of the `VideoState` class is pretty simple. \
 The return must be a new class but i made a separate `VideoState.hx` file inside the `function` folder in this repository to change the callback to a function.
